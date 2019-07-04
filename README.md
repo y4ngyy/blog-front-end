@@ -1,29 +1,10 @@
 # blog-front-end
+博客前端
 
-## Project setup
-```
-npm install
-```
+## 预期功能
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- [ ] 单页应用
+- [ ] 分类
+- [ ] 归档
+- [ ] 代码高亮
+- [ ] 侧边栏
