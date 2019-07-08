@@ -5,14 +5,13 @@
       <el-main>
         <router-view></router-view>
       </el-main>
-      <Footer></Footer>
     </el-container>
   </el-container>
 </template>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: -apple-system,SF UI Display,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -35,8 +34,7 @@ html, body{
 </style>
 <script>
   import Navbar from "./components/Navbar";
-  import Footer from "./components/Footer";
   export default {
-    components: {Footer, Navbar}
+    components: {Navbar}
   }
 </script>
