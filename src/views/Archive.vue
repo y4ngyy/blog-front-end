@@ -1,12 +1,10 @@
 <template>
-    <el-footer>
-        这是页尾
-    </el-footer>
+    
 </template>
 
 <script>
     export default {
-        name: "Footer"
+        name: "Archive"
     }
 </script>
 
