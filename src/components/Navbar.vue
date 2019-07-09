@@ -6,7 +6,7 @@
                 class="el-menu-vertical-demo"
                 @open="handleOpen"
                 @close="handleClose"
-                background-color="#545c64"
+                background-color="#63aabc"
                 text-color="#fff"
                 active-text-color="#ffd04b">
             <div class="intro">
@@ -25,14 +25,20 @@
                     <span slot="title">Archive</span>
                 </el-menu-item>
             </router-link>
-            <router-link to="/about">
+            <router-link to="/categories">
                 <el-menu-item index="3">
                     <i class="el-icon-menu"></i>
+                    <span slot="title">Categories</span>
+                </el-menu-item>
+            </router-link>
+            <router-link to="/about">
+                <el-menu-item index="4">
+                    <i class="el-icon-user"></i>
                     <span slot="title">About Me</span>
                 </el-menu-item>
             </router-link>
             <router-link to="/test">
-                <el-menu-item index="4">
+                <el-menu-item index="5">
                     <i class="el-icon-setting"></i>
                     <span slot="title">Test</span>
                 </el-menu-item>
@@ -50,10 +56,15 @@ export default {
 <style scoped>
 .el-menu {
     height: 100%;
+    text-align: center;
 }
+
 .el-avatar {
     width: 140px;
     height: 140px;
+}
+.el-menu-item i{
+    color: white;
 }
 .intro {
     padding-top: 100px;

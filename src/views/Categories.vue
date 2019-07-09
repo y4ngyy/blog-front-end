@@ -1,12 +1,12 @@
 <template>
     <div>
-        归档页面
+        分类页面
     </div>
 </template>
 
 <script>
     export default {
-        name: "Archive"
+        name: "Categories"
     }
 </script>
 
