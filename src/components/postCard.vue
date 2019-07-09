@@ -1,14 +1,14 @@
 <template>
     <el-card shadow="never">
-        <div class="text-center">
-        <h1>文章标题</h1>
-        <div class="date">
-            <i class="el-icon-date"></i>
-            <span>2019-7-9</span>
-        </div>
+        <div class="text-center article_head">
+            <h1>文章标题</h1>
+            <div class="date">
+                <i class="el-icon-date"></i>
+                <span>2019-7-9</span>
+            </div>
         </div>
         <el-divider></el-divider>
-        <article v-html="articleData">
+        <article v-html="articleData" v-highlight>
         </article>
     </el-card>
 </template>
@@ -36,7 +36,7 @@
                     method: 'get',
                     url: url,
                 }).then((response) => {
-                    this.articleData = response;
+                    this.articleData = response.data;
                 })
             }
         }
@@ -53,11 +53,25 @@ h2 {
     font-size: 24px;
     font-weight: 700;
 }
+.el-card {
+    padding: 50px;
+    margin-right: 30px;
+    margin-left: 30px;
+    border-radius: 0;
+}
 .date {
-    font-size: 20px;
+    position: absolute;
+    top: -50px;
+    right: 60px;
+    font-size: 16px;
     margin-top: 10px;
+    color: #818383;
+
 }
 .text-center {
     text-align: center;
+}
+.article_head {
+    position: relative;
 }
 </style>

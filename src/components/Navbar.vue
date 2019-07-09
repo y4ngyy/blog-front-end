@@ -9,7 +9,10 @@
                 background-color="#545c64"
                 text-color="#fff"
                 active-text-color="#ffd04b">
-            <el-avatar src="https://y4ngyy.xyz/assets/avatar.jpg"></el-avatar>
+            <div class="intro">
+                <el-avatar src="https://y4ngyy.xyz/assets/avatar.jpg"></el-avatar>
+                <h1>y4ngyy</h1>
+            </div>
             <router-link to="/">
                 <el-menu-item index="1">
                     <i class="el-icon-house"></i>
@@ -47,6 +50,19 @@ export default {
 <style scoped>
 .el-menu {
     height: 100%;
+}
+.el-avatar {
+    width: 140px;
+    height: 140px;
+}
+.intro {
+    padding-top: 100px;
+    text-align: center;
+    color: white;
+}
+.intro h1{
+    margin-top: 0px;
+    font-size: 24px;
 }
 a {
     text-decoration: none;

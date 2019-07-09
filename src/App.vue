@@ -11,7 +11,7 @@
 
 <style>
 #app {
-  font-family: -apple-system,SF UI Display,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;
+  font-family: -Helvetica, STXihei, "Microsoft YaHei", Arial, SimSun,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -29,8 +29,16 @@ html, body{
   margin: 0;
   padding: 0;
   height: 100%;
+  line-height: 35px;
 }
-
+code {
+  font-family: "Source Code Pro", Monaco,sans-serif;
+  background: #f4f6f6;
+  padding: 3px;
+}
+article {
+  font-family: Helvetica, STXihei, "Microsoft YaHei", Arial, SimSun,Monaco,sans-serif;
+}
 </style>
 <script>
   import Navbar from "./components/Navbar";
