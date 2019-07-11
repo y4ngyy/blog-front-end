@@ -1,29 +1,34 @@
 <!--used for Test-->
 <template>
-
-    <el-card shadow="never">
-        <div class="color-block"></div>
-        <div class="text-center article_head">
-            <h1>{{ title }}</h1>
-            <div class="date">
-                <i class="el-icon-date"></i>
-                <span>{{ date }}</span>
+    <div>
+        <loading v-if="!complete"></loading>
+        <el-card shadow="never" v-else>
+            <div class="color-block"></div>
+            <div class="text-center article_head">
+                <h1>{{ title }}</h1>
+                <div class="date">
+                    <i class="el-icon-date"></i>
+                    <span>{{ date }}</span>
+                </div>
             </div>
-        </div>
-        <el-divider></el-divider>
-        <article v-html="articleData" v-highlight>
-        </article>
-    </el-card>
+            <el-divider></el-divider>
+            <article v-html="articleData" v-highlight>
+            </article>
+        </el-card>
+    </div>
 </template>
 
 <script>
+    import Loading from "../components/Loading";
     export default {
         name: "article",
+        components: {Loading},
         data: function() {
             return {
                 articleData: '',
                 title: '',
-                date: ''
+                date: '',
+                complete: false
             };
         },
         created: function() {
@@ -42,7 +47,11 @@
                     method: 'get',
                     url: url,
                 }).then((response) => {
-                    this.articleData = response.data;
+                    var res = response.data;
+                    this.title = res.title;
+                    this.date = res.date;
+                    this.articleData = res.content;
+                    this.complete=true;
                 })
             }
         }

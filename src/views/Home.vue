@@ -1,20 +1,23 @@
 <template>
-  <post-card :posts="posts"></post-card>
+  <loading v-if="!complete"></loading>
+  <post-card :posts="posts" v-else></post-card>
 </template>
 
 <script>
 import PostCard from "../components/PostCard";
+import Loading from "../components/Loading";
 
 export default {
   name: 'home',
   components: {
+    Loading,
     PostCard,
   },
   data: function () {
     return {
       complete: false,
       articleDataCache: null,
-      posts: [{title:"abcd",date:"abcd",summary:"<p>abcd</p>"}]
+      posts: []
     }
   },
   created() {
@@ -31,12 +34,11 @@ export default {
           for (var key in this.articleDataCache) {
             this.articleDataCache[key].url = '/article/'+key;
           }
-          for (var key in this.articleDataCache) {
-            console.log(this.articleDataCache[key].summary);
+          for (key in this.articleDataCache) {
             this.$set(this.posts, i++, this.articleDataCache[key]);
             if (i === 10) break;
           }
-          console.log(this.posts);
+          this.complete = true;
       })
     }
   }

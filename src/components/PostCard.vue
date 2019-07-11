@@ -46,4 +46,8 @@
 .date span {
     margin-left: 5px;
 }
+a {
+    text-decoration: none;
+    color: black;
+}
 </style>
