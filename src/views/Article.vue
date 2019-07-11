@@ -27,16 +27,16 @@
             };
         },
         created: function() {
-            this.getPost()
+            this.getArticle()
         },
         methods: {
-            getPost: function () {
+            getArticle: function () {
                 // this.articleData = '<p><i class="el-icon-loading"></i></p>';
                 // var absoluteUrl = document.location.toString();
                 // var relativeUrl = absoluteUrl.split('//')[1];
                 // var firstSplitIndex = relativeUrl.indexOf('/');
                 // relativeUrl = relativeUrl.substring(firstSplitIndex);
-                var relativeUrl = this.$route.name;
+                var relativeUrl = this.$route.name + '/'+this.$route.params.articleName;
                 var url = "/api/" + relativeUrl;
                 this.$http({
                     method: 'get',

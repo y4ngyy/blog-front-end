@@ -1,26 +1,22 @@
 <template>
-    <el-card shadow="never">
-        <div class="color-block"></div>
-        <h2>{{ title }}</h2>
-        <div class="date">
-            <i class="el-icon-date"></i>
-            <span>{{ date }}</span>
-        </div>
-        <el-divider></el-divider>
-        <div class="">{{ summery }}</div>
-    </el-card>
+    <div>
+        <el-card shadow="never" v-for="(post,index) in posts" :key="index">
+            <div class="color-block"></div>
+            <h2><a v-bind:href="post.url">{{ post.title }}</a></h2>
+            <div class="date">
+                <i class="el-icon-date"></i>
+                <span>{{ post.date }}</span>
+            </div>
+            <el-divider></el-divider>
+            <div v-html="post.summary" v-highlight></div>
+        </el-card>
+    </div>
 </template>
 
 <script>
     export default {
         name: "postCard",
-        data: function () {
-            return {
-                title: "",
-                date: "",
-                summery:""
-            };
-        }
+        props:['posts'],
     }
 </script>
 
@@ -32,6 +28,7 @@
     padding-right: 50px;
     border-radius: 0;
     position: relative;
+    margin-bottom: 30px;
 }
 .color-block {
     width: 10px;
