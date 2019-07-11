@@ -1,12 +1,13 @@
 <!--used for Test-->
 <template>
+
     <el-card shadow="never">
         <div class="color-block"></div>
         <div class="text-center article_head">
-            <h1>文章标题</h1>
+            <h1>{{ title }}</h1>
             <div class="date">
                 <i class="el-icon-date"></i>
-                <span>2019-7-9</span>
+                <span>{{ date }}</span>
             </div>
         </div>
         <el-divider></el-divider>
@@ -20,8 +21,10 @@
         name: "article",
         data: function() {
             return {
-                articleData: ''
-            }
+                articleData: '',
+                title: '',
+                date: ''
+            };
         },
         created: function() {
             this.getPost()
@@ -70,7 +73,9 @@
         font-size: 16px;
         margin-top: 10px;
         color: #818383;
-
+    }
+    .date span {
+        margin-left: 5px;
     }
     .text-center {
         text-align: center;

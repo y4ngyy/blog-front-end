@@ -1,19 +1,26 @@
 <template>
     <el-card shadow="never">
         <div class="color-block"></div>
-        <h2>文章标题</h2>
+        <h2>{{ title }}</h2>
         <div class="date">
             <i class="el-icon-date"></i>
-            <span>2019-7</span>
+            <span>{{ date }}</span>
         </div>
         <el-divider></el-divider>
-        <div class="">摘录</div>
+        <div class="">{{ summery }}</div>
     </el-card>
 </template>
 
 <script>
     export default {
-        name: "postCard"
+        name: "postCard",
+        data: function () {
+            return {
+                title: "",
+                date: "",
+                summery:""
+            };
+        }
     }
 </script>
 
@@ -38,5 +45,8 @@
     position: absolute;
     right: 50px;
     top: 20px;
+}
+.date span {
+    margin-left: 5px;
 }
 </style>

@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import PostCard from "../components/postCard";
+import PostCard from "../components/PostCard";
 
 export default {
   name: 'home',

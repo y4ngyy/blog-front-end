@@ -39,6 +39,13 @@ code {
 article {
   font-family: Helvetica, STXihei, "Microsoft YaHei", Arial, SimSun,Monaco,sans-serif;
 }
+.el-card {
+  padding: 50px;
+  margin-right: 30px;
+  margin-left: 30px;
+  border-radius: 0;
+  position: relative;
+}
 </style>
 <script>
   import Navbar from "./components/Navbar";
