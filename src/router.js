@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   mode: 'history',
@@ -31,6 +31,12 @@ export default new Router({
       name: 'categories',
       component: () => import('./views/Categories.vue')
     },
+    {
+      path:'/categories/:categoryName',
+      name: 'subcategory',
+      component: () => import('./views/Categories.vue')
+    }
+      ,
     {
       path: '/article/:articleName',
       name: 'article',
