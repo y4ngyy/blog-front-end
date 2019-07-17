@@ -1,6 +1,6 @@
 <!--used for Test-->
 <template>
-
+    <loading></loading>
 </template>
 
 <script>

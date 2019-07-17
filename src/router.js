@@ -43,6 +43,11 @@ export default new Router({
       component: () => import('./views/Article.vue')
     },
     {
+      path:'/y4ngyy',
+      name: 'admin',
+      component: () => import('./views/Admin.vue')
+    },
+    {
       path: '/test',
       name: 'test',
       component: () => import('./views/Article.vue')
