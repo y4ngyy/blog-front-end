@@ -21,28 +21,50 @@
 </script>
 
 <style scoped>
+@media screen and (min-width: 769px){
+    .el-card {
+        margin-left: 30px;
+        margin-right: 30px;
+        padding-left: 50px;
+        padding-right: 50px;
+        margin-bottom: 30px;
+    }
+    .date {
+        position: absolute;
+        right: 50px;
+        top: 20px;
+    }
+    .color-block {
+        width: 10px;
+        height: 80px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #3fceff;
+    }
+}
 .el-card {
-    margin-left: 30px;
-    margin-right: 30px;
-    padding-left: 50px;
-    padding-right: 50px;
     border-radius: 0;
     position: relative;
-    margin-bottom: 30px;
 }
-.color-block {
-    width: 10px;
-    height: 80px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    background: #3fceff;
+@media screen and (max-width: 768px){
+    .el-card {
+        margin-bottom: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 0.9em;
+    }
+    .color-block {
+        width: 8px;
+        height: 50px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: #3fceff;
+    }
 }
-.date {
-    position: absolute;
-    right: 50px;
-    top: 20px;
-}
+
+
 .date span {
     margin-left: 5px;
 }

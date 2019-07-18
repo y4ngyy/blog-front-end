@@ -60,29 +60,68 @@
 </script>
 
 <style scoped>
-    h1 {
-        font-size: 34px;
-        font-weight: 700;
-    }
-    h2 {
-        font-size: 24px;
-        font-weight: 700;
+    @media screen and  (min-width: 769px){
+        .el-card {
+            padding: 50px;
+            margin-right: 30px;
+            margin-left: 30px;
+
+        }
+        .date {
+            position: absolute;
+            top: -50px;
+            right: 60px;
+            font-size: 16px;
+            margin-top: 10px;
+            color: #818383;
+        }
+        .color-block {
+            width: 15px;
+            height: 100px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #3fceff;
+        }
+        h1 {
+            font-size: 34px;
+            font-weight: 700;
+        }
+        h2 {
+            font-size: 24px;
+            font-weight: 700;
+        }
     }
     .el-card {
-        padding: 50px;
-        margin-right: 30px;
-        margin-left: 30px;
         border-radius: 0;
         position: relative;
     }
-    .date {
-        position: absolute;
-        top: -50px;
-        right: 60px;
-        font-size: 16px;
-        margin-top: 10px;
-        color: #818383;
+    @media screen and (max-width: 768px){
+        .el-card{
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .color-block {
+            width: 10px;
+            height: 80px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #3fceff;
+        }
+        h1 {
+            font-size: 24px;
+            font-weight: 700;
+        }
+        h2 {
+            font-size: 16px;
+            font-weight: 700;
+        }
+        article {
+            font-size: 0.9em;
+        }
     }
+
     .date span {
         margin-left: 5px;
     }
@@ -92,12 +131,5 @@
     .article_head {
         position: relative;
     }
-    .color-block {
-        width: 15px;
-        height: 100px;
-        position: absolute;
-        left: 0;
-        top: 0;
-        background: #3fceff;
-    }
+
 </style>

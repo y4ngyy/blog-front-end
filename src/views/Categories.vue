@@ -80,12 +80,21 @@
 </script>
 
 <style scoped>
-.el-card{
-    border-radius: 0;
-    margin-right: 30px;
-    margin-left: 30px;
-    padding: 50px;
-}
+    @media screen and (min-width: 769px){
+        .el-card{
+            border-radius: 0;
+            margin-right: 30px;
+            margin-left: 30px;
+            padding: 50px;
+        }
+    }
+    @media screen and (max-width: 768px){
+        .el-card{
+            border-radius: 0;
+            padding: 10px;
+        }
+    }
+
 a {
     color: #2fa3c5;
 }

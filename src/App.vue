@@ -1,7 +1,8 @@
 <template>
   <el-container>
-    <Navbar></Navbar>
+    <Navbar class="hidden-sm-and-down"></Navbar>
     <el-container class="is-vertical">
+      <navbar-mobile class="hidden-md-and-up"></navbar-mobile>
       <el-main>
         <router-view></router-view>
       </el-main>
@@ -39,17 +40,11 @@ code {
 article {
   font-family: Helvetica, STXihei, "Microsoft YaHei", Arial, SimSun,Monaco,sans-serif;
 }
-.el-card {
-  padding: 50px;
-  margin-right: 30px;
-  margin-left: 30px;
-  border-radius: 0;
-  position: relative;
-}
 </style>
 <script>
   import Navbar from "./components/Navbar";
+  import NavbarMobile from "./components/NavbarMobile";
   export default {
-    components: {Navbar}
+    components: {NavbarMobile, Navbar}
   }
 </script>
