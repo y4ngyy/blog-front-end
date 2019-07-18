@@ -34,18 +34,21 @@
         name: "Admin",
         data: function() {
             return {
-                admin: true,
+                admin: false,
                 username:'请输入管理员用户名',
                 password:'请输入管理员密码',
             }
         },
         methods: {
             sendAdminInfo: function() {
-
+                this.$http.post('/api/admin-check', {
+                    username: this.username,
+                    password: this.password
+                }).then((response) => {
+                    console.log(response.data);
+                    this.admin = response.data.status === true;
+                })
             },
-            uploadFile: function () {
-
-            }
         }
     }
 </script>
