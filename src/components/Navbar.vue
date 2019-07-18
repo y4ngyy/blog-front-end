@@ -1,4 +1,4 @@
-<template>
+<template class="hidden-sm-and-down">
     <el-aside>
 
         <el-menu

@@ -1,6 +1,6 @@
 <template>
   <el-container>
-    <Navbar></Navbar>
+    <Navbar ></Navbar>
     <el-container class="is-vertical">
       <el-main>
         <router-view></router-view>
