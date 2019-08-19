@@ -45,7 +45,6 @@
                     username: this.username,
                     password: this.password
                 }).then((response) => {
-                    console.log(response.data);
                     this.admin = response.data.status === true;
                 })
             },

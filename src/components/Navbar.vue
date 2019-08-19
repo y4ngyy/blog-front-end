@@ -36,12 +36,12 @@
                     <span slot="title">About Me</span>
                 </el-menu-item>
             </router-link>
-            <router-link to="/test">
-                <el-menu-item index="5">
-                    <i class="el-icon-setting"></i>
-                    <span slot="title">Test</span>
-                </el-menu-item>
-            </router-link>
+<!--            <router-link to="/test">-->
+<!--                <el-menu-item index="5">-->
+<!--                    <i class="el-icon-setting"></i>-->
+<!--                    <span slot="title">Test</span>-->
+<!--                </el-menu-item>-->
+<!--            </router-link>-->
         </el-menu>
     </el-aside>
 </template>
